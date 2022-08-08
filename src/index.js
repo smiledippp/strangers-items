@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Homepage } from './components/index'; 
+import { Homepage } from './components'; 
 
 
 const App = () => {
@@ -20,6 +20,9 @@ const App = () => {
                 {/* Main Content Section */}
                 <Routes>
                     <Route path="/" element={<Homepage />} />
+                    <Route path="/home" element={<Homepage />} />
+
+                    <Route path="*" element={'404, not found'}></Route>
                </Routes>
                {/*footer*/}
                <element class='footer'>

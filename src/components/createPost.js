@@ -1,6 +1,6 @@
 import React from "react";
-import reactDOM from 'react-router-dom';
 import { useState } from "react";
+import { Route } from "react-router-dom";
 
 const newPost = (info) => {
     const {setuserPost, setuserList, userPost, userList} = info;
@@ -19,5 +19,16 @@ const newPost = (info) => {
     //     setDelivery(false);
     //   }
 
-      
-}
+    return (
+        <div>
+              <div key={idx} style={{border: "2px solid black"}}>
+                <p>Name: {newProduct.title} </p>
+                <p>Description: {newProduct.description}</p>
+                <p>Price: {newProduct.price}</p>
+                <button onClick={<Route path='/allposts'></Route>}>Click Me</button>
+              </div>
+        </div>
+    )      
+};
+
+export default newPost;
