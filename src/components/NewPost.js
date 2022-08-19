@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { newPost } from 'api/post';
+import { newPost } from '../api/post';
 
 export default function NewPost({ token }) {
 const [title, setTitle] = useState('');

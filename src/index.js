@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {
     Nav,
     NewPost,
+    newPost,
     MakePost,
     createPost,
     Homepage,
@@ -32,7 +33,7 @@ const App = () => {
                   <Route path="/" element={<Homepage />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/allposts" element={<ProductsList />} />
-                  <Route path="/addpost" element={< NewPost/>} />
+                  <Route path="/addpost" element={< newPost/>} />
 
              </Routes>
              {/*foot*/}
