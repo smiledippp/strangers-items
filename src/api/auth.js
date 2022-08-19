@@ -17,7 +17,7 @@ export const registerUser = async (username, password) => {
     const result = await response.json();
     return result;
   };
-  export const userLogin = async (username, password) => {
+  export const loginUser = async (username, password) => {
     const response = await fetch(`${url}/users/login`, {
       method: "POST",
       headers: {
@@ -34,4 +34,15 @@ export const registerUser = async (username, password) => {
     const result = await response.json();
     console.log(result);
     return result;
+};
+
+export const myUser = async (token) => {
+  const response = await fetch(`${url}/users/me`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  const result = await response.json();
+  return result;
 };

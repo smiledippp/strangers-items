@@ -1,5 +1,5 @@
 import React from "react";
-import {userLogin} from '../api/auth';
+import { loginUser } from "../api/auth";
 
 const Login = (props) => {
     const {
@@ -13,7 +13,7 @@ const Login = (props) => {
       } = props;
   
        
-      const checkLogin = (e) => {
+      const userLogin = (e) => {
         e.preventDefault();
         try {
           Login(userName, password, setToken, setLoggedIn);
@@ -29,16 +29,16 @@ const Login = (props) => {
         <div>
           <form onSubmit={async (e) => {
             e.preventDefault();
-            const result = await userLogin(username, password);
+            const result = await userLogin(userName, password);
             localStorage.setIntem('token', result.data.token);
             setToken(result.data.token);
-            setUsername('');
+            setUserName('');
             setPassword('');
           }}
         >
        <div className="log-in-container">
         <h1 className="page-title">Log In</h1>
-        <form action="" className="form" onSubmit={e=> checkLogin(e)}>
+        <form action="" className="form" onSubmit={e=> userLogin(e)}>
             <input
             type="text"
             onChange={function(event) {

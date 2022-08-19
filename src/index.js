@@ -20,13 +20,13 @@ const App = () => {
       <div>
           <Router>
               {/* Navbar */}
-              <nav>
+              <div id='nav'>
                   <Link to="/login">Login</Link>
                   
                   <Link to="/allposts">In Your Area</Link>
                   <Link to="/">Home Page</Link>
                   <Link to="/addpost"> add post here</Link>
-              </nav>
+              </div>
               {/* Main Content Section */}
               <Routes>
                   <Route path="/" element={<Homepage />} />

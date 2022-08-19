@@ -1,7 +1,7 @@
 const url="https://strangers-things.herokuapp.com/2206-FTB-ET-WEB-FT-B"
 
 export const fetchAllPosts = async () => {
-    const response = await fetch(`${url}/posts`);
+    const response = await fetch(`${url}/allposts`);
     const result = await response.json();
     return result;
   };
@@ -12,7 +12,7 @@ export const fetchAllPosts = async () => {
     return result;
   };
   export const newPost = async (token, postObj) => {
-    const response = await fetch(`${url}/posts`, {
+    const response = await fetch(`${url}/addposts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

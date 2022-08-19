@@ -22,10 +22,11 @@ body {
   margin:0;
 }
 
-nav{
+#nav{
     display: flex;
     flex-direction: row-reverse;
     text-indent: 30px;
+    justify-content: space-between;
     color: #9c04a1;
     font-size: large;
     overflow: hidden;
