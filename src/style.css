@@ -46,3 +46,11 @@ nav{
   text-align: right;
   flex-direction: row-reverse;
 }
+
+.log-in-container {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  margin-top: 50px;
+
+}

@@ -1,4 +1,5 @@
-export {default as ProductsList} from './postList.js';
-export {default as Homepage} from './homepage';
-export {default as newPost} from './createPost';
-export { default as onePost} from './onePost.js';
+export {default as ProductsList} from './ProductList.js';
+export {default as Homepage} from './Homepage';
+export {default as newPost} from './NewPost';
+export { default as Login} from './Login';
+export {default as SignUp} from './SignUp';
