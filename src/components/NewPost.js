@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { newPost } from '../api/post';
 
-export default function NewPost({ token }) {
+function NewPost({ token }) {
 const [title, setTitle] = useState('');
 const [description, setDescription] = useState('');
 const [price, setPrice] = useState('');
@@ -29,7 +29,11 @@ return(
         <input placeholder='location'
         value={location}
         onChange={(e) => setLocation(e.target.value)} />
+
+<button type='submit'>submit product </button>
     </form>
   </div>
   )
 }
+
+export default NewPost;

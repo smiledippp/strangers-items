@@ -2,11 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {
-    Nav,
     NewPost,
-    newPost,
-    MakePost,
-    createPost,
     Homepage,
     NewAccount,
     Login,
@@ -33,7 +29,7 @@ const App = () => {
                   <Route path="/" element={<Homepage />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/allposts" element={<ProductsList />} />
-                  <Route path="/addpost" element={< newPost/>} />
+                  <Route path="/addpost" element={< NewPost/>} />
 
              </Routes>
              {/*foot*/}
